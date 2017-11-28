@@ -490,6 +490,15 @@ module.exports = class kraken extends Exchange {
         }
         return result;
     }
+    
+    dummyExampleMethodThatGetsTranspiledSuccessfully () {
+        let rawOrders = [];
+        let result = [];
+        for (let i = 0; i < rawOrders.length; i++) {
+            let order = rawOrders[i];
+            result.push (this.parseOrder (order, market));
+        }
+    }
 
     async fetchOrder (id, symbol = undefined, params = {}) {
         await this.loadMarkets ();
