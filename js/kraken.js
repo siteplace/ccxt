@@ -491,7 +491,8 @@ module.exports = class kraken extends Exchange {
         return result;
     }
     
-    dummyExampleMethodThatGetsTranspiledSuccessfully () {
+    dummyExampleMethodThatGetsTranspiledSuccessfully (symbol) {
+        let market = this.market (symbol);
         let rawOrders = [];
         let result = [];
         for (let i = 0; i < rawOrders.length; i++) {
